@@ -1,0 +1,72 @@
+{
+    "system": {
+        "name": "Pan-Pacific-v1.0",
+        "code_folder_path": "src",
+        "code_entry_file": "main.py",
+        "layout_folder_path": "layout",
+        "sound_folder_path": "sound",
+        "rfile_folder_path": "rfile",
+        "irfile_folder_path": "ir",
+        "system_id": "3426",
+        "author": {
+            "name": "Your Name",
+            "email": "user@yourdomain.com"
+        },
+        "version": "0.0.1",
+        "primary_device_alias": "ProcessorAlias"
+    },
+    "devices": [
+        {
+            "name": "IPCP Pro 250 _ test",
+            "part_number": "60-1429-01",
+            "alias": "ProcessorAlias",
+            "network": {
+                "host_network_type": "LAN",
+                "interfaces": [
+                    {
+                        "address": "192.168.3.243",
+                        "type": "LAN"
+                    }
+                ]
+            }
+        }, 
+            {
+            "name": "Extron Control for Ipad 01",
+            "part_number": "79-559-01",
+            "alias": "PanelAlias_01",
+            "extron_control_web_id": "39e9e1de",
+            "ui": {
+                "layout_file": "Pan Pacific-ipad-GUI-submission.gdl",
+                "enable_click_sound": true,
+                "press_feedback": "none",
+                "thumb_change_report_interval": 0.1,
+                "thumb_to_fill_sync_time": 0.5
+            }
+        }, {
+            "name": "Extron Control for Ipad 02",
+            "part_number": "79-559-01",
+            "alias": "PanelAlias_02",
+            "extron_control_web_id": "c1d63c00",
+            "ui": {
+                "layout_file": "Pan Pacific-ipad-GUI-submission.gdl",
+                "enable_click_sound": true,
+                "press_feedback": "none",
+                "thumb_change_report_interval": 0.1,
+                "thumb_to_fill_sync_time": 0.5
+            }
+        }, {
+            "name": "Extron Control for Web",
+            "part_number": "60-sVTLP",
+            "alias": "PanelAliasWeb",
+            "extron_control_web_id": "88a8775a",
+            "ui": {
+                "layout_file": "Pan Pacific-ipad-GUI-submission.gdl",
+                "enable_click_sound": true,
+                "press_feedback": "none",
+                "thumb_change_report_interval": 0.1,
+                "thumb_to_fill_sync_time": 0.5
+            }
+        }
+    ],
+    "schemaVersion": "1.0.0"
+}
