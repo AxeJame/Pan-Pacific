@@ -16,7 +16,7 @@ from modules.helper.ModuleSupport import eventEx
 from devices import devTLP, devIpad1
 
 # Define UI Objects
-# Tui chi muon test github
+# Tui chi muon test github / test cai quan que
 # import tlpStart
 # import tlpMatrixSwitcher
 # import tlpPassword
