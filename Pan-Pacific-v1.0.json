@@ -24,7 +24,7 @@
                 "host_network_type": "LAN",
                 "interfaces": [
                     {
-                        "address": "192.168.3.243",
+                        "address": "192.168.3.252",
                         "type": "LAN"
                     }
                 ]
