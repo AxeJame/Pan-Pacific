@@ -13,49 +13,32 @@ from extronlib.ui import Button, Label
 
 # Project imports
 from modules.helper.ModuleSupport import eventEx
-from devices import devTLP, devIpadList, devIpad1
+from devices import devTLP, devIpadList, devIpad1, devIpad2
 
+from extronlib.device import ProcessorDevice, UIDevice
 # Define UI Objects
-
+from library.NavBasic import TLP_class
 # Define UI Object Events
 
-# TLP : start page
-class TLP_start:
-    List = []
-    def __init__(self, PanelAlias):
-        self.TLP = PanelAlias
-        UIhost = self.TLP
-        TLP_start.List.append(self)
-
-        '''=== Start '''
-        self.lblStartTitleText = Label(UIhost, 7001)
-
-
-        self.lblStartRoomText = Label(UIhost, 10000)
-
-        '''=== Begin '''
-
-        self.btnStart = Button(UIhost, 8000)
-        
-
-        # btnClosePassPage = Button(UIhost, 1131)
-        # @eventEx(btnClosePassPage, 'Pressed')
-        # def btnStartEvent(button: Button, state: str):
-        #      print(button.Name, state)  
-        #      devTLP.HidePopup('Password Popup')
-''' =============================================================================================================================='''
+# TLP : start page reference
+IDStartPageDict = {
+    'IDStaTile'     : 7001,           # ID Start tile
+    'IDPrToBegin'   : 8000,           # Press To Begin button
+    'IDStaText'     : 10000,          # Start text label
+}
+TLP_class.PressToBegin(devTLP,IDStartPageDict)
+TLP_class.PressToBegin(devIpad1,IDStartPageDict)
+TLP_class.PressToBegin(devIpad2,IDStartPageDict)
 
 
 
 
+# for tlp in devIpadList:   
+#     TLP_start(tlp).lblStartTitleText.SetText('BALLROOM')
+#     TLP_start(tlp).lblStartRoomText.SetText('Audio Visual System')
 
-
-for tlp in devIpadList:   
-    TLP_start(tlp).lblStartTitleText.SetText('BALLROOM')
-    TLP_start(tlp).lblStartRoomText.SetText('Audio Visual System')
-
-    @eventEx(TLP_start(tlp).btnStart, 'Pressed')
-    def btnStartPressed(button: Button, state: str):
-        print(button.Name, state)
-        tlp.ShowPage('Password page')
+#     @eventEx(TLP_start(tlp).btnStart, 'Pressed')
+#     def btnStartPressed(button: Button, state: str):
+#         print(button.Name, state)
+#         tlp.ShowPage('Password page')
         
