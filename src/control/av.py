@@ -17,3 +17,4 @@ Examples:
 # Extron Library imports
 
 # Project imports
+import control.avMatrixSwitcher

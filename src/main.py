@@ -14,9 +14,13 @@ print('ControlScript', Platform(), Version())
 
 # Project imports
 import variables
+print('Done import variables')
 import devices
+print('Done import devices')
 import ui.tlp
+print('Done import TLP')
 import control.av
+print('Done import Control.av')
 import system
 
 system.Initialize()

@@ -10,12 +10,11 @@ mirrored panels should be in the same file.
 # Extron Library imports
 
 # Project imports
-from devices import devTLP, devIpadList, devIpad1, devIpad2
+from devices import devTLPList
 
 # Define UI Objects
 from library.NavBasic import TLP_class
 # Define UI Object Events
-
 
 # Labels customizing the TLP for this room
 # Number button
@@ -68,7 +67,7 @@ IDPwDict2 = {                #ID password dict
 
 }
 
-TLP_class.LoginAVSystem(devTLP, IDPwDict)
-TLP_class.LoginAVSystem(devIpad1, IDPwDict2)
-TLP_class.LoginAVSystem(devIpad2, IDPwDict)
+TLP_class.LoginAVSystem(devTLPList[0], IDPwDict)
+TLP_class.LoginAVSystem(devTLPList[1], IDPwDict2)
+TLP_class.LoginAVSystem(devTLPList[2], IDPwDict)
 

@@ -8,14 +8,10 @@ mirrored panels should be in the same file.
 # Python imports
 
 # Extron Library imports
-from extronlib.system import MESet
-from extronlib.ui import Button, Label
 
 # Project imports
-from modules.helper.ModuleSupport import eventEx
-from devices import devTLP, devIpadList, devIpad1, devIpad2
+from devices import devTLPList
 
-from extronlib.device import ProcessorDevice, UIDevice
 # Define UI Objects
 from library.NavBasic import TLP_class
 # Define UI Object Events
@@ -24,21 +20,10 @@ from library.NavBasic import TLP_class
 IDStartPageDict = {
     'IDStaTile'     : 7001,           # ID Start tile
     'IDPrToBegin'   : 8000,           # Press To Begin button
-    'IDStaText'     : 10000,          # Start text label
+    'IDStaText'     : 10000          # Start text label
 }
-TLP_class.PressToBegin(devTLP,IDStartPageDict)
-TLP_class.PressToBegin(devIpad1,IDStartPageDict)
-TLP_class.PressToBegin(devIpad2,IDStartPageDict)
+TLP_class.PressToBegin(devTLPList[0],IDStartPageDict, name = 'Master')
+TLP_class.PressToBegin(devTLPList[1],IDStartPageDict, name = 'Ipad Ballroom A')
+TLP_class.PressToBegin(devTLPList[2],IDStartPageDict, name = 'Ipad Ballroom B')
 
-
-
-
-# for tlp in devIpadList:   
-#     TLP_start(tlp).lblStartTitleText.SetText('BALLROOM')
-#     TLP_start(tlp).lblStartRoomText.SetText('Audio Visual System')
-
-#     @eventEx(TLP_start(tlp).btnStart, 'Pressed')
-#     def btnStartPressed(button: Button, state: str):
-#         print(button.Name, state)
-#         tlp.ShowPage('Password page')
         

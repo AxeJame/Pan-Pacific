@@ -21,7 +21,7 @@ devIPCP = ProcessorDevice('ProcessorAlias')     # IPCP test
 # devIPCP = ProcessorDevice('ProcessorAlias')       # IPCP main
 
 devTLP = UIDevice('PanelAliasWeb')
-
 devIpad1 = UIDevice('PanelAlias_01')
 devIpad2 = UIDevice('PanelAlias_02')
-devIpadList = [devTLP, devIpad1, devIpad2]
+
+devTLPList = [devTLP, devIpad1, devIpad2]

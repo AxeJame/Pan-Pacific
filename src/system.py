@@ -12,11 +12,15 @@ Examples of items in the system file:
 # Python imports
 
 # Extron Library imports
-
+from devices import devTLPList
 # Project imports
 
 def Initialize():
     # Connect all devices
-
+    # Show Start page
+    devTLPList[0].ShowPage('Start')
+    devTLPList[1].ShowPage('Start')
+    devTLPList[2].ShowPage('Start')
+    print('Show Start page')
     # Finish Initialize() with a print()
     print('System Initialized')
